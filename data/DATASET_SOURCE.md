@@ -1,86 +1,79 @@
+# TerraSpectra – Dataset Source and Inspection
 
-# TerraSpectra Dataset Selection
+## 1. Dataset Information
 
-## Project
-TerraSpectra: Hyperspectral Crop Disease Forecasting
+- **Dataset Name:** Grapevine Hyperspectral Spectral Dataset
+- **Contributor:** Maxime Ryckewaert
+- **Published:** 31 March 2022
+- **Version:** 1
+- **DOI:** 10.17632/b33r2dzng8.1
+- **Source:** Mendeley Data
+- **Project:** VINIoT
+- **Licence:** CC BY 4.0
 
-## Selected Dataset
-Grapevine Hyperspectral Dataset
+## 2. Official Dataset Description
 
-## Dataset Source
-Mendeley Data
+The dataset contains spectra obtained from hyperspectral images of grapevine leaves. It includes healthy leaves and leaves showing symptoms associated with diseases, dehydration, stress, and other conditions.
 
-https://data.mendeley.com/datasets/b33r2dzng8/1
+## 3. Local Dataset Details
 
-Dataset ID: b33r2dzng8
+- **File:** `tab_all_expended_element.csv`
+- **File Size:** Approximately 1.5 GB
+- **Total Columns:** 212
+- **Metadata Columns:** 8
+- **Measurement Columns:** 204
+- **Total Records:** 425,847
 
-## Dataset Details
+## 4. Identified Columns
 
-- Crop: Grapevine
-- Disease: Flavescence dorée and other diseases
-- Total observations: 425,847
-- Total columns: 212
-- Spectral bands: 204
-- Unique leaf samples: 204
-- Grape varieties: 7
-- Collection locations/plots: 5
-- Disease categories: 3
-- File format: CSV
-- Original archive size: Approximately 672 MB
-- Extracted CSV size: Approximately 1.5 GB
+The first eight columns are:
 
-## Disease Categories
+- Var1
+- Var2
+- flavescenceDor
+- parcelle
+- cepage
+- chL
+- flav
+- nbi
 
-| Label | Meaning | Number of Leaves |
-|---|---|---:|
-| oui | Flavescence dorée | 80 |
-| non | Other diseased leaves | 80 |
-| sain | Healthy leaves | 44 |
+The remaining 204 columns contain numerical measurements that appear to represent spectral reflectance values.
 
-## Data Quality Inspection
+## 5. Observed Label Distribution
 
-- Total observations inspected: 425,847
-- Spectral columns: 204
-- Total spectral values checked: 86,872,788
-- Missing or invalid spectral values: 0
-- Minimum spectral value: -0.005596
-- Maximum spectral value: 1.358567
-- Unique leaf IDs: 204
-- Leaves with consistent labels: 204
-- Minimum observations per leaf: 48
-- Maximum observations per leaf: 5,183
+| Label | Records |
+|---|---:|
+| oui | 152,938 |
+| sain | 119,993 |
+| non | 152,916 |
+| **Total** | **425,847** |
 
-## Reason for Selection
+The exact meaning of each label requires further confirmation from the dataset documentation.
 
-This dataset contains genuine grapevine hyperspectral observations with multiple disease categories, seven grape varieties, and different collection locations.
+## 6. Grape Varieties
 
-It provides a suitable foundation for developing and evaluating a machine learning model for grape disease classification using spectral measurements.
+Seven grape varieties were identified:
 
-## Dataset Status
+- Gamay
+- Fer
+- Duras
+- Colombard
+- Loin de l'œil
+- Mauzac
+- Chardonnay
 
-- Dataset researched: Yes
-- Dataset selected: Yes
-- Dataset downloaded: Yes
-- Dataset extracted: Yes
-- Dataset structure inspected: Yes
-- Disease labels inspected: Yes
-- Data quality checked: Yes
-- Preprocessing: Pending
-- Exploratory data analysis: Pending
-- Model development: Pending
+## 7. Initial Inspection
 
-## Important Modelling Considerations
+- The CSV file was successfully extracted.
+- The file was inspected using Python's built-in CSV library.
+- The first records contained numeric measurement values.
+- Disease-related labels and grape varieties were inspected.
+- The full dataset has not yet been preprocessed or used for model training.
 
-- Split the dataset by leaf ID to prevent data leakage.
-- Preserve the original spectral measurements during initial preprocessing.
-- Investigate the meaning of all metadata columns.
-- Evaluate the three disease categories separately.
-- Consider both pixel-level and leaf-level model evaluation.
+## 8. Dataset Usage Plan
 
-## Next Actions
+The dataset will be evaluated for grapevine leaf condition classification using hyperspectral measurements. Further investigation is required to confirm label definitions, sample structure, and suitable validation strategies before model development.
 
-1. Investigate spectral and metadata columns.
-2. Perform exploratory data analysis.
-3. Develop a preprocessing pipeline.
-4. Prepare training and testing datasets using leaf-level splitting.
-5. Train and evaluate suitable machine learning models.
+**Dataset source:** https://data.mendeley.com/datasets/b33r2dzng8/1
+
+**DOI:** https://doi.org/10.17632/b33r2dzng8.1
