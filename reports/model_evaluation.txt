@@ -1,0 +1,21 @@
+TERRASPECTRA MODEL EVALUATION
+
+Cross-validation results:
+Logistic Regression: mean macro F1 = 0.7211, std = 0.0917
+Support Vector Machine: mean macro F1 = 0.7039, std = 0.0396
+Random Forest: mean macro F1 = 0.7018, std = 0.0861
+
+Selected model: Logistic Regression
+Test accuracy: 0.7561
+Test macro F1: 0.7777
+
+Classification report:
+              precision    recall  f1-score   support
+
+         non       0.75      0.56      0.64        16
+         oui       0.68      0.81      0.74        16
+        sain       0.90      1.00      0.95         9
+
+    accuracy                           0.76        41
+   macro avg       0.78      0.79      0.78        41
+weighted avg       0.76      0.76      0.75        41

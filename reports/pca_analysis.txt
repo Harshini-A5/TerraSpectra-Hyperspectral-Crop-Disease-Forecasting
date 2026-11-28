@@ -1,0 +1,27 @@
+TERRASPECTRA - PCA ANALYSIS REPORT
+=============================================
+
+Original spectral features: 204
+PCA variance retention target: 95%
+
+FOLD-WISE PCA RESULTS
+---------------------------------------------
+Couffouleux: 4 components, 95.32% variance explained, 98.04% feature reduction
+DEVT: 4 components, 95.98% variance explained, 98.04% feature reduction
+LISLE SUR TARN: 5 components, 97.37% variance explained, 97.55% feature reduction
+Rabastens: 4 components, 95.19% variance explained, 98.04% feature reduction
+Terral: 4 components, 95.03% variance explained, 98.04% feature reduction
+
+Average components retained: 4.20
+Average variance explained: 95.78%
+
+CONCLUSION
+---------------------------------------------
+PCA reduced 204 spectral features to 4 or 5 components.
+At least 95% of training-data variance was retained
+in every validation fold.
+PCA Logistic Regression achieved an overall macro F1
+of 0.6981 and accuracy of 69.12%.
+
+These results are preliminary because the dataset
+contains only 204 samples from five vineyard plots.
